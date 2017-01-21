@@ -13,21 +13,85 @@
       }
     },
     {
-        "name": "dotnet_modulecssender",
-        "loader": {
-            "name": "dotnet",
-          "entrypoint": {
-            "assembly.name": "ModuleCSSender",
-            "entry.type": "ModuleCSSender.TKSender"
-          }
+      "name": "dotnet_modulecsfilter",
+      "loader": {
+        "name": "dotnet",
+        "entrypoint": {
+          "assembly.name": "ModuleCSFilter",
+          "entry.type": "ModuleCSFilter.TKFilter"
+        }
+      },
+      "args": {
+        "aaa": 0.1
+      }
+    },
+    {
+      "name": "dotnet_modulecssender",
+      "loader": {
+        "name": "dotnet",
+        "entrypoint": {
+          "assembly.name": "ModuleCSSender",
+          "entry.type": "ModuleCSSender.TKSender"
+        }
+      },
+      "args": {
+        "errorprobability": 0.1,
+        "delayms": 5000
+      }
+    },
+    {
+      "name": "identity_map",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "identity_map.dll"
+        }
+      },
+      "args": [
+        {
+          "macAddress": "01:02:03:04:05:06",
+          "deviceId": "PC",
+          "deviceKey": "MKFlutvnHn/WutJkDGbRPZ/PgGSQIKDmOhMtIivt198="
         },
-        "args": "module configuration aaaa"
+        {
+          "macAddress": "00:15:5D:10:EF:02",
+          "deviceId": "PC",
+          "deviceKey": "MKFlutvnHn/WutJkDGbRPZ/PgGSQIKDmOhMtIivt198="
+        }
+      ]
+    },
+    {
+      "name": "iothub",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "iothub.dll"
+        }
+      },
+      "args": {
+        "IoTHubName": "pltkdpepliot2016S1",
+        "IoTHubSuffix": "azure-devices.net",
+        "Transport": "AMQP"
+      }
     }
+
   ],
   "links": [
     {
-      "source": "dotnet_modulecssender",
+      "source": "*",
       "sink": "logger"
+    },
+    {
+      "source": "dotnet_modulecssender",
+      "sink": "dotnet_modulecsfilter"
+    },
+    {
+      "source": "dotnet_modulecsfilter",
+      "sink": "identity_map"
+    },
+    {
+      "source": "identity_map",
+      "sink": "iothub"
     }
   ]
 }

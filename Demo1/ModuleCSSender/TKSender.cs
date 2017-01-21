@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.IoT.Gateway;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,23 @@ namespace ModuleCSSender
 {
     public class TKSender : IGatewayModule, IGatewayModuleStart
     {
-        private Broker broker;
-        private string configuration;
-
+        private Broker m_broker;
+        private string m_configurationStr;
+        private double m_errorprobability=0.1;
+        private int m_delayms=5000;
         public void Create(Broker broker, byte[] configuration)
         {
-            this.broker = broker;
-            this.configuration = System.Text.Encoding.UTF8.GetString(configuration);
+            this.m_broker = broker;
+            this.m_configurationStr = System.Text.Encoding.UTF8.GetString(configuration);
+            JObject cfg = JObject.Parse(m_configurationStr);
+            if (cfg.TryGetValue("errorprobability", out JToken jerrorprobability))
+            {
+                m_errorprobability = (double)jerrorprobability;
+            }
+            if (cfg.TryGetValue("delayms", out JToken jdelayms))
+            {
+                m_delayms = (int)jdelayms;
+            }
         }
 
         public void Destroy()
@@ -31,15 +42,15 @@ namespace ModuleCSSender
 
         public void Start()
         {
-            Thread oThread = new Thread(new ThreadStart(this.threadBody));
+            Thread oThread = new Thread(new ThreadStart(this.ThreadBody));
             // Start the thread
             oThread.Start();
         }
 
         static Random rnd = new Random();
 
-        private void threadBody()
-        {
+        private void ThreadBody()
+        { 
             Random r = new Random();
             int n = r.Next();
 
@@ -64,13 +75,16 @@ namespace ModuleCSSender
                     Altitude = (float)(1000 * Math.Cos(ts.TotalMilliseconds / 480) * Math.Sin(ts.TotalMilliseconds / 2000) + rnd.Next(30)),
                 };
                 if (rnd.NextDouble() > 0.8) { msgProp.Add("direction", "eventhub"); }
-                if (rnd.NextDouble() > 0.9) { msgProp.Add("status", "error"); }
+                if (rnd.NextDouble() > 1 - m_errorprobability) { msgProp.Add("status", "error"); }
+                if (rnd.NextDouble() > 0.99) { msgProp.Add("filterprop", "1"); }
 
+
+                msgProp.Add("macAddress", "01:02:03:04:05:06");
 
                 Message messageToPublish = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(mallnum)), msgProp);
-                this.broker.Publish(messageToPublish);
+                this.m_broker.Publish(messageToPublish);
 
-                Thread.Sleep(5000);
+                Thread.Sleep(m_delayms);
 
             }
         }

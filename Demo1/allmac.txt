@@ -1,0 +1,196 @@
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : pltkw101607
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : dom2.local
+
+Ethernet adapter vEthernet (DockerNAT):
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-10-EF-04
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::198d:5c04:b069:abc9%34(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 10.0.75.1(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter vEthernet (Internal Ethernet Port Windows Phone Emulator Internal Switch):
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #2
+   Physical Address. . . . . . . . . : 00-15-5D-10-EF-02
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::5038:6963:69f9:9786%22(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 169.254.80.80(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 771757405
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-E5-DD-85-3C-97-0E-B9-CD-CA
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter vEthernet (INTERNAL):
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #4
+   Physical Address. . . . . . . . . : 00-15-5D-10-EF-07
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::25d2:c8d8:5751:6d01%10(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.10.1(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 1124078941
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-E5-DD-85-3C-97-0E-B9-CD-CA
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+
+Ethernet adapter vEthernet (HNS Internal NIC):
+
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #6
+   Physical Address. . . . . . . . . : 00-15-5D-AF-AB-8D
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::6c11:286b:67f3:957f%20(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 172.21.0.1(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . : 
+   DHCPv6 IAID . . . . . . . . . . . : 1241519453
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-E5-DD-85-3C-97-0E-B9-CD-CA
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter vEthernet (EXTERNAL):
+
+   Connection-specific DNS Suffix  . : dom2.local
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #3
+   Physical Address. . . . . . . . . : 3C-97-0E-B9-CD-CA
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : fdec:30a8:2ca5::572(Preferred) 
+   Lease Obtained. . . . . . . . . . : Saturday, January 21, 2017 9:23:46 AM
+   Lease Expires . . . . . . . . . . : Wednesday, February 28, 2153 5:34:56 AM
+   IPv6 Address. . . . . . . . . . . : fdec:30a8:2ca5:0:fcb3:e948:534:acea(Preferred) 
+   Temporary IPv6 Address. . . . . . : fdec:30a8:2ca5:0:7110:adf9:90ca:fb65(Preferred) 
+   Link-local IPv6 Address . . . . . : fe80::fcb3:e948:534:acea%19(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.16.239(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Saturday, January 21, 2017 9:23:47 AM
+   Lease Expires . . . . . . . . . . : Sunday, January 22, 2017 8:52:13 AM
+   Default Gateway . . . . . . . . . : 192.168.16.253
+   DHCP Server . . . . . . . . . . . : 192.168.16.253
+   DHCPv6 IAID . . . . . . . . . . . : 624727822
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-E5-DD-85-3C-97-0E-B9-CD-CA
+   DNS Servers . . . . . . . . . . . : fe80::ea94:f6ff:fe3f:5a00%19
+                                       192.168.16.6
+                                       192.168.16.253
+   NetBIOS over Tcpip. . . . . . . . : Disabled
+   Connection-specific DNS Suffix Search List :
+                                       dom2.local
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter
+   Physical Address. . . . . . . . . : 3C-A9-F4-57-D8-E1
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter vEthernet (EXTERNAL_WIFI):
+
+   Connection-specific DNS Suffix  . : dom2.local
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter #5
+   Physical Address. . . . . . . . . : 3C-A9-F4-57-D8-E0
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : fdec:30a8:2ca5::bf2(Preferred) 
+   Lease Obtained. . . . . . . . . . : Thursday, January 19, 2017 7:35:27 PM
+   Lease Expires . . . . . . . . . . : Wednesday, February 28, 2153 5:34:56 AM
+   IPv6 Address. . . . . . . . . . . : fdec:30a8:2ca5:0:d02e:f105:9edd:5975(Preferred) 
+   Temporary IPv6 Address. . . . . . : fdec:30a8:2ca5:0:51ab:ea6a:7758:b69d(Deprecated) 
+   Temporary IPv6 Address. . . . . . : fdec:30a8:2ca5:0:a9fb:f8ee:ffa7:5b12(Preferred) 
+   Link-local IPv6 Address . . . . . : fe80::d02e:f105:9edd:5975%4(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 192.168.16.238(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Saturday, January 21, 2017 9:23:35 AM
+   Lease Expires . . . . . . . . . . : Sunday, January 22, 2017 8:51:55 AM
+   Default Gateway . . . . . . . . . : 192.168.16.253
+   DHCP Server . . . . . . . . . . . : 192.168.16.253
+   DHCPv6 IAID . . . . . . . . . . . : 1044163060
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-1F-E5-DD-85-3C-97-0E-B9-CD-CA
+   DNS Servers . . . . . . . . . . . : 192.168.16.6
+                                       192.168.16.253
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : F8-2F-A8-E5-2A-10
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.dom2.local:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : dom2.local
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{85C20C8B-9518-4781-A4BC-5B60D8839C29}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #2
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{1A731300-2817-4833-BDF0-3BD78BBBB224}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #4
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{CD14F7B0-51A5-445A-99AC-7CBDD618ABCD}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #6
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+Tunnel adapter isatap.{77B89C31-2B96-41B8-BED4-2712914EBCB0}:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter #7
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes

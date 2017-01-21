@@ -5,22 +5,30 @@
 #include "gateway.h"
 
 
-int main()
+int main(int argc, char** argv)
 {
 	GATEWAY_HANDLE gateway;
 	printf("Enter - gateway start(please connect debugger etc.)\n");
-	//(void)getchar();
-	if ((gateway = Gateway_CreateFromJson("D:\\GIT_TKOPACZ\\2017IotHubGatewaySDK\\Demo1\\hostapplication.json")) == NULL)
+	(void)getchar();
+	if (argc != 2)
 	{
-		printf("failed to create the gateway from hostapplication.json\n");
+		printf("usage: HostApplication configFile\n");
+		printf("where configFile is the name of the file that contains the Gateway configuration\n");
 	}
 	else
 	{
-		printf("gateway successfully created from JSON\n");
-		printf("gateway shall run until ENTER is pressed\n");
-		(void)getchar();
-		Gateway_Destroy(gateway);
+		if ((gateway = Gateway_CreateFromJson(argv[1])) == NULL)
+		{
+			printf("failed to create the gateway from JSON\n");
+		}
+		else
+		{
+			printf("gateway successfully created from JSON\n");
+			printf("gateway shall run until ENTER is pressed\n");
+			(void)getchar();
+			Gateway_Destroy(gateway);
+		}
 	}
-	return 0;
+
 }
 
