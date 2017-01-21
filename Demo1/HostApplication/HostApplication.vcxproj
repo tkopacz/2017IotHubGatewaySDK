@@ -100,6 +100,8 @@ copy D:\GIT_TKOPACZ\2017IotHubGatewaySDK\LIB_DEBUG\C\aziotsharedutil.* $(TargetD
 copy D:\GIT_TKOPACZ\2017IotHubGatewaySDK\LIB_DEBUG\C\nanomsg.* $(TargetDir)
 copy D:\GIT_TKOPACZ\2017IotHubGatewaySDK\LIB_DEBUG\C\*.* $(TargetDir)
 copy D:\GIT_TKOPACZ\2017IotHubGatewaySDK\Demo1\hostapplication.json $(TargetDir)
+copy D:\GIT_TKOPACZ\2017IotHubGatewaySDK\Demo1\ModuleCSSender\bin\Debug\*.* $(TargetDir)
+
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

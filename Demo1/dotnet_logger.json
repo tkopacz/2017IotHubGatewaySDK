@@ -13,18 +13,15 @@
       }
     },
     {
-      "name": "dotnet_modulecssender",
-      "loader": {
-        "name": "dotnet",
-        "entrypoint": {
-          "assembly.name": "ModuleCSSender",
-          "entry.type": "ModuleCSSender.TKSender"
-        }
-      },
-      "args": {
-        "p1": "module configuration aaaa",
-        "delay":  5000
-      }
+        "name": "dotnet_modulecssender",
+        "loader": {
+            "name": "dotnet",
+          "entrypoint": {
+            "assembly.name": "ModuleCSSender",
+            "entry.type": "ModuleCSSender.TKSender"
+          }
+        },
+        "args": "module configuration aaaa"
     }
   ],
   "links": [
