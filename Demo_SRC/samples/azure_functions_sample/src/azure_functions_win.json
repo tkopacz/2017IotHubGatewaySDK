@@ -1,0 +1,34 @@
+{
+  "modules": [
+    {
+      "name": "hello_world",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "..\\..\\..\\modules\\hello_world\\Debug\\hello_world.dll"
+        }
+      },
+      "args": null
+    },
+    {
+      "name": "azure_functions",
+      "loader": {
+        "name": "native",
+        "entrypoint": {
+          "module.path": "..\\..\\..\\modules\\azure_functions\\Debug\\azure_functions.dll"
+        }
+      },
+      "args": {
+        "hostname": "<YourHostNameHere from Functions Portal>",
+        "relativePath": "api/<YourFunctionName>",
+        "key": "<your Api Key Here>"
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "hello_world",
+      "sink": "azure_functions"
+    }
+  ]
+}
