@@ -78,7 +78,7 @@ namespace ModuleCSSender
                 if (rnd.NextDouble() > 1 - m_errorprobability) { msgProp.Add("status", "error"); }
                 if (rnd.NextDouble() > 0.99) { msgProp.Add("filterprop", "1"); }
 
-
+                msgProp.Add("source", "tktelemetry");
                 msgProp.Add("macAddress", "01:02:03:04:05:06");
 
                 Message messageToPublish = new Message(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(mallnum)), msgProp);
