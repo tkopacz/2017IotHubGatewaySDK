@@ -1,0 +1,1 @@
+[{"time":"Wed Feb 15 20:50:29 2017","content":"Log started"},{"time":"Wed Feb 15 20:50:30 2017","properties":{"helloWorld":"from Azure IoT Gateway SDK simple sample!"},"content":"aGVsbG8gd29ybGQ="},{"time":"Wed Feb 15 20:50:30 2017","content":"Log stopped"}]
