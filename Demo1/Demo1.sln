@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26020.0
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HostApplication", "HostApplication\HostApplication.vcxproj", "{BA3EC781-816D-4D6E-B669-E21E37F16825}"
 EndProject
@@ -51,8 +51,8 @@ Global
 		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|Any CPU.Build.0 = Release|x64
 		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x64.ActiveCfg = Release|x64
 		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x64.Build.0 = Release|x64
-		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
-		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|Win32
+		{BA3EC781-816D-4D6E-B669-E21E37F16825}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|Win32
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -69,14 +69,14 @@ Global
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|Any CPU.Build.0 = Release|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x64.ActiveCfg = Release|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x64.Build.0 = Release|Any CPU
-		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x86.ActiveCfg = Release|Any CPU
-		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x86.Build.0 = Release|Any CPU
+		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x86.ActiveCfg = Release|x86
+		{669DB641-CE80-4892-9CDC-4E43E847FE44}.Release|x86.Build.0 = Release|x86
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|Any CPU.ActiveCfg = Release|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|Any CPU.Build.0 = Release|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x64.ActiveCfg = Release|Any CPU
 		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x64.Build.0 = Release|Any CPU
-		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x86.ActiveCfg = Release|Any CPU
-		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x86.Build.0 = Release|Any CPU
+		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x86
+		{669DB641-CE80-4892-9CDC-4E43E847FE44}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|x86
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -93,14 +93,14 @@ Global
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x64.ActiveCfg = Release|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x64.Build.0 = Release|Any CPU
-		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x86.ActiveCfg = Release|Any CPU
-		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x86.Build.0 = Release|Any CPU
+		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x86.ActiveCfg = Release|x86
+		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.Release|x86.Build.0 = Release|x86
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|Any CPU.ActiveCfg = Release|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|Any CPU.Build.0 = Release|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x64.ActiveCfg = Release|Any CPU
 		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x64.Build.0 = Release|Any CPU
-		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x86.ActiveCfg = Release|Any CPU
-		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x86.Build.0 = Release|Any CPU
+		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x86.ActiveCfg = RelWithDebInfo|x86
+		{C12DA22B-ECD8-44CC-87C3-7DD9B35221B3}.RelWithDebInfo|x86.Build.0 = RelWithDebInfo|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

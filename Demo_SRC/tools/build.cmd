@@ -20,7 +20,7 @@ rem -- parse script arguments
 rem ----------------------------------------------------------------------------
 
 rem // default build options
-set build-config=Debug
+set build-config=Release
 set build-platform=Win32
 set CMAKE_run_unittests=OFF
 set CMAKE_run_e2e_tests=OFF

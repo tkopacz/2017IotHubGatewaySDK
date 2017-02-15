@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.IoT.Gateway</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.IoT.Gateway.IGatewayModule">
+            <summary> Interface to be implemented by the .NET Module </summary>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.IGatewayModule.Create(Microsoft.Azure.IoT.Gateway.Broker,System.Byte[])">
+            <summary>
+                Creates a module using the specified configuration connecting to the specified message broker.
+            </summary>
+            <param name="broker">The broker to which this module will connect.</param>
+            <param name="configuration">A byte[] with user-defined configuration for this module. This parameter shall be enconded to a UTF-8 String.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.IGatewayModule.Destroy">
+            <summary>
+                Disposes of the resources allocated by/for this module.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.IGatewayModule.Receive(Microsoft.Azure.IoT.Gateway.Message)">
+            <summary>
+                The module's callback function that is called upon message receipt.
+            </summary>
+            <param name="received_message">The message being sent to the module.</param>
+            <returns></returns>                
+        </member>
+        <member name="T:Microsoft.Azure.IoT.Gateway.IGatewayModuleStart">
+            <summary> Optional Start Interface to be implemented by the .NET Module </summary>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.IGatewayModuleStart.Start">
+            <summary>
+                Informs module the gateway is ready to send and receive messages.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Azure.IoT.Gateway.Message">
+            <summary> Object that represents a message passed between modules. </summary>
+        </member>
+        <member name="P:Microsoft.Azure.IoT.Gateway.Message.Content">
+            <summary>
+              Message Content.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.IoT.Gateway.Message.Properties">
+            <summary>
+               Message Properties.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Message.#ctor(System.Byte[])">
+            <summary>
+                Constructor for Message. This receives a byte array. Format defined at <a href="https://github.com/Azure/azure-iot-gateway-sdk/blob/master/core/devdoc/message_requirements.md">message_requirements.md</a>.
+            </summary>
+            <param name="msgAsByteArray">ByteArray with the Content and Properties of a message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Message.#ctor(System.Byte[],System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+                Constructor for Message. This constructor receives a byte[] as it's content and Properties.
+            </summary>
+            <param name="contentAsByteArray">Content of the Message</param>
+            <param name="properties">Set of Properties that will be added to a message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Message.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+                Constructor for Message. This constructor receives a string as it's content and Properties.
+            </summary>
+            <param name="content">String with the ByteArray with the Content and Properties of a message.</param>
+            <param name="properties">Set of Properties that will be added to a message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Message.#ctor(Microsoft.Azure.IoT.Gateway.Message)">
+            <summary>
+                Constructor for Message. This constructor receives another Message as a parameter.
+            </summary>
+            <param name="message">Message Instance.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Message.ToByteArray">
+            <summary>
+               Converts the message into a byte array (Format defined at <a href="https://github.com/Azure/azure-iot-gateway-sdk/blob/master/core/devdoc/message_requirements.md">message_requirements.md</a>).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.IoT.Gateway.Broker">
+            <summary> Object that represents the message broker, to which messsages will be published. </summary>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Broker.#ctor(System.Int64,System.Int64,Microsoft.Azure.IoT.Gateway.NativeDotNetHostWrapper)">
+            <summary>
+              Constructor for a Broker that receives a reference to a broker, module and a nativeWrapper. NativeWrapper is used for Unit Tests.
+            </summary>
+            <param name="broker">A reference to an existing broker.</param>
+            <param name="module">A reference to an existing module.</param>
+            <param name="nativeWrapper">A Native DotNet Host Wrapper used for Mocking purposes on Unit Tests.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Broker.#ctor(System.Int64,System.Int64)">
+            <summary>
+              Broker Default Contructor that received a long for reference to an existing broker and another long to a reference to a module.
+            </summary>
+            <param name="broker">A reference to an existing broker.</param>
+            <param name="module">A reference to an existing module.</param>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.Broker.Publish(Microsoft.Azure.IoT.Gateway.Message)">
+            <summary>
+                Publish a message to the gateway message broker. 
+            </summary>
+            <param name="message">Object representing the message to be published to the broker.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Azure.IoT.Gateway.NativeDotNetHostWrapper">
+            <summary>
+                Wrapper Used for Native/Managed Interop.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.NativeDotNetHostWrapper.Module_DotNetHost_PublishMessage(System.IntPtr,System.IntPtr,System.Byte[],System.Int32)">
+            <summary>
+                 Module_DotNetHost wrapper for publishing a message.
+            </summary>
+            <param name="broker">Handle to the message broker.</param>
+            <param name="sourceModule">Handle to the (native) source module.</param>
+            <param name="message">Message content as a byte array.</param>
+            <param name="size">Size of the byte array.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Azure.IoT.Gateway.NativeDotNetHostWrapper.PublishMessage(System.IntPtr,System.IntPtr,System.Byte[])">
+            <summary>
+               Publishes a message to a given message broker.
+            </summary>
+            <param name="broker">Handle to the message broker.</param>
+            <param name="sourceModule">Handle to the (native) source module.</param>
+            <param name="message">Message content as a byte array.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
